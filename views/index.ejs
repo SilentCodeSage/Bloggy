@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>bloggy</title>
+</head>
+<body>
+    <div class="container">
+        <%- include('partials/header') %>
+        <div class="header">
+            <div class="left">
+                <img src="/images/img.webp" alt="">
+                <p>"Dive into our world of words. Explore, engage, and discover. Welcome to your blog haven."</p>
+            </div>
+            <div class="right">
+                <form action="">
+                <input type="button" id="newPostButton" value="New Post">
+                <input type="button" class="view-post" id="post-view" value="Posts">
+                </form>
+            </div>
+        </div>
+
+        <%- include('partials/footer') %>
+        
+    </div>
+    <script>
+        document.getElementById('newPostButton').addEventListener('click', function() {
+            window.location.href = '/new';
+        });
+        document.getElementById('post-view').addEventListener('click', function() {
+            window.location.href = '/posts';
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/6ff22b7768.js" crossorigin="anonymous"></script>
+</body>
+</html>

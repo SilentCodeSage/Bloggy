@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <div class="new-container">
+        <div class="image">
+            <img src="/images/new.jpg" alt="">
+        </div>
+        <form action="/new-post" method="post" >
+            <h1>Create New Post.</h1>
+            <input type="text" name="title" id="">
+            <textarea name="content" id=""></textarea>
+            <input type="submit" value="Create Post">
+        </form>
+    </div>
+    
+    <%- include('partials/footer') %>
+    <script src="https://kit.fontawesome.com/6ff22b7768.js" crossorigin="anonymous"></script>
+</body>
+</html>

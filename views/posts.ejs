@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+        <div class="posts-container" >
+            <% if(locals.itemArray){ %>
+                <% for(var i = 0; i < itemArray.length; i++){ %>
+                    <!-- <ul> -->
+                        <div class="posts-view-container">
+                            <!-- <li> -->
+                                <!-- <button id="btn-viewblog"></button></button> -->
+                                <h1><%= itemArray[i].title %></h1>
+                                <p><%= itemArray[i].content %></p>
+                            <!-- </li> -->
+                            <button class="delete">Delete</button>
+                            <button class="edit">Edit</button>
+                        </div>
+                    <!-- </ul> -->
+                <% } %>
+            <% } %>
+            
+            
+        </div>
+    <%- include('partials/footer') %>
+    <script>        
+        document.querySelector('.delete').addEventListener('click', function() {
+            
+            console.log(document.getElementsByClassName('posts-view-container'));
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/6ff22b7768.js" crossorigin="anonymous"></script>
+</body>
+</html>
